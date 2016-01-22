@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-striped">
+            <tr>
+                <th>Item Name - Click for Details</th>
+                <th>Minimum Bid</th>
+                <th>Number of Bids</th>
+                <th>Submit Bid</th>
+                <th>Edit Item</th>
+                <th>Delete Item</th>
+            </tr>
+            <tr ng-repeat="item in vm.items">
+                <td><a href="" ng-click="openModel()">{{item.itemName}}</a></td>
+                <td>{{item.minimumBid}}</td>
+                <td>{{item.numberOfBids}}</td>
+                <td><button class="btn btn-primary" ng-click="addBid()">Submit Bid</button></td>
+                <!--run addBid method-->
+                <td><button class="btn btn-warning" ng-click="editItem()">Edit</button></td>
+                <!--go to the edit page-->
+                <td><button class="btn btn-danger" ng-click="deleteItem()">Delete</button></td>
+                <!--insert a confirmation message for the delete-->
+            </tr>
+        </table>
+    </div>
+
+</div>
